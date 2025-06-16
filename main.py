@@ -101,4 +101,4 @@ while is_not_even:
         is_not_even = False
     print(rnd_num)
 
-
+print("okey, o dabar testuojame gita")
