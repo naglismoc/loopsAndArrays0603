@@ -101,4 +101,20 @@ while is_not_even:
         is_not_even = False
     print(rnd_num)
 
-print("okey, o dabar testuojame gita")
+print("okey, o dabar testuojame gita :)")
+
+
+for y in range(1, 11):#3
+    for x in range(1,11):#1;2;3
+        print(y * x, end=" ")
+    print()
+print("paslepta zinute")
+
+
+
+
+
+
+
+
+
