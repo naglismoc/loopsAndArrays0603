@@ -111,6 +111,88 @@ for y in range(1, 11):#3
 print("paslepta zinute")
 
 
+print(sep="")
+
+
+print(*[item for item in nums], sep=", ")
+
+num = 4
+arr = [1,5,10,4,8,5]
+
+grades = [
+    [1,2,3,4,4,5],# matieka
+    [4,5,6],# lietuviu
+    [8,5,10],# tikyba
+    [4,8,8,10],#anglu
+    [7,5,3,4],#fizika
+    [10,4,10]#kūno kultūra
+]
+total_sum = 0
+total_count = 0
+for lesson in grades:
+    sum = 0
+    count = 0
+    for grade in lesson:
+        sum += grade
+        count += 1
+    total_sum += round(sum / count)
+    total_count +=1
+print(total_sum / total_count)
+
+
+sum = 0
+count = 0
+
+for lesson in grades:
+    for grade in lesson:
+        sum += grade
+        count += 1
+print(sum,count, sum / count)
+
+
+students = [
+    ['Rima', ' Beitnorė', 1988, 'da'],
+    ['Neringa', ' Dainauskė', 1988, 'da'],
+    ['Lukas', ' Bukauskas', 1989, 'da'],
+    ['Tomas', ' Strelčiūnas', 1985, 'da']
+]
+
+print(students)
+
+
+
+# Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami random.randint(x,x) funkcija. Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+# “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+# “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė (pasinaudokite random.randint(x,x) funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
+#
+
+all_nails_count = 0
+for i in range(5):
+    taukst_total = 0
+    taukst_count = 0
+    while taukst_total < 85:
+        taukst = random.randint(5,20)
+        taukst_total += taukst
+        taukst_count += 1
+    # print(taukst_count, taukst_total)
+    all_nails_count += taukst_count
+# print("-----------",all_nails_count)
+
+all_nails_count = 0
+for i in range(5):
+    taukst_total = 0
+    taukst_count = 0
+    while taukst_total < 85:
+        taukst_count += 1
+        if random.randint(0,1) == 1:
+            taukst = random.randint(20,30)
+            taukst_total += taukst
+    # print(taukst_count, taukst_total)
+    all_nails_count += taukst_count
+# print("-----------",all_nails_count)
+
+
+
 
 
 
